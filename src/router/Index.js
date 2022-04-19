@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Redirect,
+    // Redirect,
     Switch,
     Route,
     HashRouter
@@ -15,13 +15,15 @@ const Index = () => {
         <HashRouter>
             <Switch>
                 <Route path="/login" component={ Login }/>
-                <Route path="/" render={
+                <Route path="/" component={ SandBox }/>
+                {/* <Route path="/" render={
                     () => {
-                        localStorage.getItem("token") ?
-                            <SandBox/> :
-                            <Redirect to="/login"/>
+                        // localStorage.getItem("token") ?
+                            // <SandBox/> :
+                            // <Redirect to="/login"/>
+                            <SandBox></SandBox>
                     }
-                }/>
+                }/> */}
             </Switch>
         </HashRouter>
     )
